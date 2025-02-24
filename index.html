@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Fake Login</title>
+    <title>Unilogin</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: 100px;
+            margin-top: 50px;
         }
         .login-box {
-            width: 300px;
+            width: 350px;
+	    height: 500px;
             margin: auto;
-            padding: 20px;
+            padding: 30px;
             border: 1px solid black;
             box-shadow: 5px 5px 10px gray;
         }
         input {
             display: block;
-            width: 100%;
+            width: 91%;
             margin: 10px 0;
             padding: 8px;
         }
         button {
-            background-color: red;
+            background-color: blue;
             color: white;
             padding: 10px;
             border: none;
@@ -31,12 +32,12 @@
     </style>
 </head>
 <body>
-    <h2>Fake Login Page</h2>
     <div class="login-box">
-        <p><strong>Login to continue:</strong></p>
+        <h1 style="color:blue";>Unilogin</h1>
+	<p><strong>Login for at fortsætte:</strong></p>
         <form onsubmit="showWarning(event)">
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
+            <input type="text" id="username" placeholder="Brugernavn" required>
+            <input type="password" id="password" placeholder="Adgangskode" required>
             <button type="submit">Login</button>
         </form>
     </div>
@@ -46,7 +47,7 @@
             event.preventDefault();
             let user = document.getElementById("username").value;
             let pass = document.getElementById("password").value;
-            alert("WARNING: You just entered your password on an untrusted site!\n\nUsername: " + user + "\nPassword: " + pass + "\n\nNever enter your credentials on unknown websites.");
+            alert("Vi kan nu stjæle dine koder lol.\n\nBrugernavn: " + user + "\nAdgangskode: " + pass + "\n\nSkriv ikke dine informationer på sider du ikke stoler på.");
         }
     </script>
 </body>
